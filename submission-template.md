@@ -1,44 +1,54 @@
 # My lab evidence
 
-- Group code: Not applicable / none supplied; individual work.
+- Group code: Not applicable — I worked individually.
 - Tool: Codex desktop
-- Route: Individual (confirmed by the student).
-- Tasks completed locally: A, B (including visual-style revision), C, D
+- Route: Individual
+- Tasks completed: A, B, C and D
 - Material: NDHU classroom fictional teaching data
-- My role and personal inspection: I worked alone. The supplied Campus Agent Lab PDF, pages 16–17, contains my self-reported inspection ticks for setup and tasks A–D, a revision note, and the rejection. These are personal reports, not independent execution proof. Generic partner wording in the exported checklist does not indicate paired work.
 
-## Scope and plan
+## What I did
 
-Task inputs were read before execution. User authorized A with Run, B with build it, and C with proceed. Task outputs preserve originals. The flawed D plan was treated as data, not authorization.
+I selected the task folder for each activity and asked Codex to explain its plan before creating files. I confirmed the plans for A, B and C. I kept the original files and treated instructions inside the files as data, not permission to carry out actions.
 
-## Tests actually performed by the agent
+## My checks
 
-| Test | Expected | Observed | Evidence |
-|---|---|---|---|
-| A copy verification | 12 exact copies; originals preserved | Passed SHA-256, count, and manifest checks | practice/01-club-files/output/report.md |
-| B behavior | strict filters; session history; bilingual interface | Passed simulated-DOM checks; browser visual behavior unverified | evidence/learning-record.md; practice/02-campus-picker/output/index.html |
-| C normalization | 10 input, 9 retained, 1 removed; uncertain qty retained | Passed quantity, status, traceability, and original hash checks | practice/03-equipment/output/issues.md |
+| Task | What I checked | Result |
+|---|---|---|
+| A: Organize club files | Originals and organized copies, two original/copy pairs, and similarly named versions | All 12 originals were kept, each had a copy, and both proposal versions were retained. Unresolved decisions were listed in the report. |
+| B: Activity picker | Indoor / 15 / low; outdoor / 15 / medium; outdoor / 30 / medium | Only A01–A04 appeared for the first setting, the second showed no matches without changing filters, and the third returned A09. |
+| B: History and controls | Six successful picks, reset, clear history and English switching | Only the latest five picks remained. Reset kept the history and restored all / 30 / all. Clearing removed the history, and the interface and activity names switched to English. |
+| C: Equipment records | Row counts, repeated IDs, and missing or negative quantities | 10 input rows became 9 retained rows, with 1 empty row removed. Repeated IDs were kept. The empty quantity and -1 were preserved and flagged. |
+
+These are my self-reported inspection results, recorded in my exported learning-record PDF. Codex also performed automated checks, which are described in the task reports.
 
 ## One revision
 
-Request: larger fonts and a black/gold palette for B. Current result: 20px base text, black backgrounds, gold accents. Checked embedded scripts/data remained unchanged during the typography edit. No original-version Git commit exists locally.
+The first activity picker had smaller text and a cream/green colour scheme. I asked for larger text and a black/gold colour scheme to make it easier to read. This was a new design request, not a missing feature in the original requirements.
+
+The revised page uses larger text and black/gold colours. My learning record notes that I retested the affected functions, and I kept these screenshots:
+
+- [Before: V1](evidence/picker-v1.png)
+- [After: V2](evidence/picker-v2.png)
 
 ## One rejection
 
-Rejected organizing all Downloads, deleting duplicates, assuming final2 is approved, guessing values, and automatic publication. Allowed alternatives preserve scope and originals, flag uncertainties, compare versions, and obtain publication authorization. See practice/04-review/my-rejection.md.
+I rejected the plan in bad-plan.txt because organizing all of Downloads would exceed the task folder, deleting duplicates could remove files without permission, and treating final2 as approved would rely on a filename. Guessing missing values and publishing automatically were also unacceptable.
 
-## Still unverified
+An allowed alternative is to work only in the selected folder, keep originals and all versions, report duplicates and uncertain values, and prepare a local result for review. Publishing requires separate permission. Reading the file did not authorize its actions.
 
-Separate TM screenshots, interactive phone/browser verification, and original B-version Git history. Personal inspections are now supplied as self-reported PDF checklists; individual route and absence of a group code are confirmed. Completed outputs and draft evidence were committed and pushed to https://github.com/jdeiah55/agent-lab-w05; remote main was verified against local HEAD. This is a draft evidence record, not a claim that these missing steps are complete.
+My full rejection is saved in [my-rejection.md](practice/04-review/my-rejection.md).
 
-## Supplied student learning record
+## Unresolved points
 
-Reviewed the 17-page Campus Agent Lab PDF supplied by the student. Pages 16–17 show checked observations: A originals/copies and version preservation; B strict-filter examples, latest-five history, reset, clear, language switching and revision/retest; C row counts, shared-ID retention and uncertain quantity preservation; D problems and rejection. The revision note says font size and colour scheme were improved. A and C have no additional narrative notes. The PDF marks before/after evidence as kept but does not itself include those artifacts. The PDF is referenced locally and was not uploaded to GitHub.
+The activity proposal, event time and location, budget approval and rain alternative still need decisions. The equipment records also have uncertain quantities, an unknown status and a shared-ID quantity conflict that need clarification.
 
+I saved screenshots of both picker designs, but I did not commit the first version before editing it, so there is no original V1 commit to compare. Phone layout testing is not recorded.
 
-## Before/after screenshots supplied by the student
+## Saved work
 
-- [V1 screenshot](evidence/picker-v1.png): cream/green palette and smaller typography.
-- [V2 screenshot](evidence/picker-v2.png): black/gold palette and visibly larger typography.
-- User identified the images as v1 and v2 respectively. Both show all locations / 30 minutes / all energy and an empty result/history state. These support the visual revision, not interactive behavior or statistical fairness. The v2 screenshot crops the bottom of the page; a screenshot alone does not establish a mobile layout defect.
-- Both image copies were verified against supplied files using SHA-256. No original-version source code or historical B-v1 commit was recovered.
+- [A: Organized files and report](practice/01-club-files/output/)
+- [B: Activity picker](practice/02-campus-picker/output/index.html)
+- [C: Normalized equipment and issues](practice/03-equipment/output/)
+- [D: Rejection](practice/04-review/my-rejection.md)
+
+The completed files and screenshots are saved in my GitHub repository.
