@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Campus break / 校園休息</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:20px;color:#f6edda;background:#0b0b0b;color-scheme:dark}*{box-sizing:border-box}body{margin:0}main{max-width:980px;margin:auto;padding:32px 24px 56px}header{display:flex;justify-content:space-between;align-items:center;gap:16px}.eyebrow{letter-spacing:.12em;font-size:1rem;font-weight:700;color:#e6bd60}h1{font-size:clamp(2.2rem,6vw,3.5rem);letter-spacing:-.035em;line-height:1.15;margin:16px 0;color:#f4d58a}p{line-height:1.7}.notice{font-size:1rem;color:#d6c8a8;border-left:3px solid #c99d43;padding-left:14px}.panel{background:#171717;border:1px solid #65512b;border-radius:20px;padding:26px;margin-top:26px}.filters{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}label{display:block;font-weight:650;margin-bottom:10px;color:#f4d58a}select,button{font:inherit;min-height:52px;border-radius:10px}select{width:100%;padding:12px;border:1px solid #ad8840;background:#0e0e0e;color:#f6edda}button{cursor:pointer;padding:12px 18px;border:1px solid #ad8840;background:transparent;color:#f4d58a;font-weight:600}button:hover{background:#30271a}button:focus-visible,select:focus-visible{outline:3px solid #ffe09a;outline-offset:4px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.primary{background:#e6bd60;color:#12100b;border-color:#e6bd60}.primary:hover{background:#f4d58a}.result{background:#241e13;min-height:180px;border-color:#c99d43}h2{margin:0 0 14px;font-size:1.45rem;color:#f4d58a}.result h3{font-size:clamp(1.8rem,4vw,2.2rem);line-height:1.3;margin:14px 0;overflow-wrap:anywhere}.metadata{display:flex;gap:10px;flex-wrap:wrap}.chip{padding:8px 12px;border-radius:8px;background:#0e0e0e;color:#f6edda;border:1px solid #65512b;font-size:1rem}.history-head{display:flex;align-items:center;justify-content:space-between;gap:12px}ol{padding-left:28px}li{padding:16px 0;border-bottom:1px solid #65512b}li::marker{color:#e6bd60}li:last-child{border:0}.history-detail{display:block;font-size:1rem;line-height:1.6;margin-top:7px;color:#d6c8a8}.empty{color:#d6c8a8}@media(max-width:560px){main{padding:22px 16px}header{align-items:flex-start}.filters{grid-template-columns:1fr}.panel{padding:20px}.actions button{flex:1 1 180px}.history-head{align-items:flex-start;flex-wrap:wrap}header button{white-space:nowrap}h1{font-size:2.2rem}}
+</style>
+</head>
+<body><main>
+<header><span class="eyebrow" id="eyebrow"></span><button id="language" type="button"></button></header>
+<h1 id="title"></h1><p id="intro"></p><p class="notice" id="notice"></p>
+<section class="panel" aria-labelledby="filters-title"><h2 id="filters-title"></h2>
+<div class="filters">
+<div><label for="location" id="location-label"></label><select id="location"><option value="all"></option><option value="indoor"></option><option value="outdoor"></option></select></div>
+<div><label for="time" id="time-label"></label><select id="time"><option value="15"></option><option value="30" selected></option><option value="60"></option></select></div>
+<div><label for="energy" id="energy-label"></label><select id="energy"><option value="all"></option><option value="low"></option><option value="medium"></option></select></div>
+</div><div class="actions"><button class="primary" id="pick" type="button"></button><button id="reset" type="button"></button></div></section>
+<section class="panel result" aria-live="polite" aria-atomic="true"><h2 id="result-title"></h2><div id="result"></div></section>
+<section class="panel" aria-labelledby="history-title"><div class="history-head"><h2 id="history-title"></h2><button id="clear" type="button"></button></div><div id="history"></div></section>
+</main>
+<script id="activity-data" type="application/json">
+[
+  {
+    "id": "A01",
+    "name_zh": "整理書包",
+    "name_en": "Organize your bag",
+    "location_type": "indoor",
+    "minutes": 10,
+    "energy": "low"
+  },
+  {
+    "id": "A02",
+    "name_zh": "畫一張小卡",
+    "name_en": "Draw a small card",
+    "location_type": "indoor",
+    "minutes": 15,
+    "energy": "low"
+  },
+  {
+    "id": "A03",
+    "name_zh": "寫三句讀書筆記",
+    "name_en": "Write three study notes",
+    "location_type": "indoor",
+    "minutes": 10,
+    "energy": "low"
+  },
+  {
+    "id": "A04",
+    "name_zh": "安靜讀兩頁書",
+    "name_en": "Read two pages quietly",
+    "location_type": "indoor",
+    "minutes": 15,
+    "energy": "low"
+  },
+  {
+    "id": "A05",
+    "name_zh": "排好明日待辦",
+    "name_en": "Plan tomorrow’s tasks",
+    "location_type": "indoor",
+    "minutes": 20,
+    "energy": "low"
+  },
+  {
+    "id": "A06",
+    "name_zh": "整理本機練習檔",
+    "name_en": "Organize practice files",
+    "location_type": "indoor",
+    "minutes": 30,
+    "energy": "medium"
+  },
+  {
+    "id": "A07",
+    "name_zh": "在合適位置慢走",
+    "name_en": "Take a gentle walk in a suitable area",
+    "location_type": "outdoor",
+    "minutes": 15,
+    "energy": "low"
+  },
+  {
+    "id": "A08",
+    "name_zh": "觀察天空並畫草圖",
+    "name_en": "Observe the sky and sketch",
+    "location_type": "outdoor",
+    "minutes": 20,
+    "energy": "low"
+  },
+  {
+    "id": "A09",
+    "name_zh": "在合適位置快走",
+    "name_en": "Take a brisk walk in a suitable area",
+    "location_type": "outdoor",
+    "minutes": 30,
+    "energy": "medium"
+  },
+  {
+    "id": "A10",
+    "name_zh": "規劃小組練習",
+    "name_en": "Plan a group exercise",
+    "location_type": "indoor",
+    "minutes": 45,
+    "energy": "medium"
+  },
+  {
+    "id": "A11",
+    "name_zh": "記錄自然色彩",
+    "name_en": "Record colors in nature",
+    "location_type": "outdoor",
+    "minutes": 45,
+    "energy": "low"
+  },
+  {
+    "id": "A12",
+    "name_zh": "構思下一次社團活動",
+    "name_en": "Brainstorm a future club activity",
+    "location_type": "indoor",
+    "minutes": 60,
+    "energy": "medium"
+  }
+]
+
+</script>
+<script>
+'use strict';
+const activities=JSON.parse(document.getElementById('activity-data').textContent);
+const words={en:{eyebrow:'A MOMENT FOR YOU',title:'Pick your campus break.',intro:'Choose what fits your day. Let a little randomness do the rest.',notice:'Fictional teaching activities; not an official university announcement.',filters:'Make it fit',location:'Location',time:'Available time',energy:'Energy',all:'All',indoor:'Indoor',outdoor:'Outdoor',low:'Low',medium:'Medium',minutes:'minutes',pick:'Pick an activity',reset:'Reset filters',result:'Your next break',ready:'Choose your filters, then pick an activity.',none:'No matching activities.',history:'Recent picks · latest 5',clear:'Clear history',empty:'Your successful picks will appear here.',id:'Activity ID'},zh:{eyebrow:'留一點時間給自己',title:'挑一個校園休息活動',intro:'選擇適合今天的條件，讓隨機選擇帶來一點靈感。',notice:'虛構教學活動；非大學官方公告。',filters:'設定條件',location:'地點',time:'可用時間',energy:'精力',all:'全部',indoor:'室內',outdoor:'室外',low:'低',medium:'中',minutes:'分鐘',pick:'隨機挑選活動',reset:'重設篩選',result:'你的下一段休息',ready:'設定條件後，按下隨機挑選活動。',none:'No matching activities.（沒有符合條件的活動。）',history:'最近紀錄 · 最新 5 次',clear:'清除紀錄',empty:'成功挑選的活動會顯示在這裡。',id:'活動編號'}};
+let lang='en',history=[],current=null,status='ready';
+const el=id=>document.getElementById(id);
+function matching(location,minutes,energy){return activities.filter(a=>(location==='all'||a.location_type===location)&&a.minutes<=Number(minutes)&&(energy==='all'||a.energy===energy));}
+function detail(a){const w=words[lang];return `${w.id}: ${a.id} · ${a.minutes} ${w.minutes} · ${w.location}: ${w[a.location_type]} · ${w.energy}: ${w[a.energy]}`;}
+function renderResult(){const box=el('result');box.replaceChildren();if(status!=='success'){const p=document.createElement('p');p.textContent=words[lang][status];box.append(p);return;}const h=document.createElement('h3');h.textContent=current['name_'+lang];const p=document.createElement('p');p.className='metadata';for(const text of detail(current).split(' · ')){const span=document.createElement('span');span.className='chip';span.textContent=text;p.append(span);}box.append(h,p);}
+function renderHistory(){const box=el('history');box.replaceChildren();if(!history.length){const p=document.createElement('p');p.className='empty';p.textContent=words[lang].empty;box.append(p);return;}const list=document.createElement('ol');for(const a of history){const li=document.createElement('li');const name=document.createElement('strong');name.textContent=a['name_'+lang];const d=document.createElement('span');d.className='history-detail';d.textContent=detail(a);li.append(name,d);list.append(li);}box.append(list);}
+function render(){const w=words[lang];document.documentElement.lang=lang==='zh'?'zh-Hant':'en';document.title=lang==='zh'?'校園休息活動挑選器':'Campus break activity picker';for(const [id,key] of Object.entries({'eyebrow':'eyebrow','title':'title','intro':'intro','notice':'notice','filters-title':'filters','location-label':'location','time-label':'time','energy-label':'energy','pick':'pick','reset':'reset','result-title':'result','history-title':'history','clear':'clear'})){el(id).textContent=w[key];}el('language').textContent=lang==='en'?'中文':'English';el('language').setAttribute('aria-label',lang==='en'?'切換至中文':'Switch to English');for(const id of ['location','energy'])for(const option of el(id).options)option.textContent=w[option.value];for(const option of el('time').options)option.textContent=option.value+' '+w.minutes;renderResult();renderHistory();}
+function pick(){const candidates=matching(el('location').value,el('time').value,el('energy').value);if(!candidates.length){current=null;status='none';}else{current=candidates[Math.floor(Math.random()*candidates.length)];status='success';history.unshift(current);history=history.slice(0,5);}renderResult();renderHistory();}
+function reset(){el('location').value='all';el('time').value='30';el('energy').value='all';}
+el('pick').addEventListener('click',pick);el('reset').addEventListener('click',reset);el('clear').addEventListener('click',()=>{history=[];renderHistory();});el('language').addEventListener('click',()=>{lang=lang==='en'?'zh':'en';render();});render();
+</script></body></html>
