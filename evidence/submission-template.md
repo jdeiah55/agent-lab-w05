@@ -29,4 +29,4 @@ Rejected organizing all Downloads, deleting duplicates, assuming final2 is appro
 
 ## Still unverified
 
-Student personal inspections, group code and route, TM screenshots, actual phone/browser visual QA, and GitHub commits/pushes. This is a draft evidence record, not a claim that these missing steps are complete.
+Student personal inspections, group code and route, TM screenshots, actual phone/browser visual QA, and original B-version Git history. Completed outputs and draft evidence were committed and pushed to https://github.com/jdeiah55/agent-lab-w05; remote main was verified against local HEAD. This is a draft evidence record, not a claim that these missing steps are complete.

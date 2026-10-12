@@ -14,4 +14,4 @@ Prepared from the actual conversation and command results, not a full exported t
 - The original B version is not preserved in Git history. A retrospective file reconstruction would not prove an earlier commit.
 - Group code, individual/paired route, student personal inspection, and TM screenshots are not supplied. Do not claim these as complete.
 - Attached screenshots describe assignment instructions; they are not execution evidence.
-- GitHub destination and remote publication remain pending.
+- Connected to https://github.com/jdeiah55/agent-lab-w05 and pushed five commits: A 0ed2946, current B 645fa3e, C cc1b49c, D 057d00b, evidence e4f71b6. Verified remote main matched local HEAD after push. Earlier per-task timing and original B history remain unavailable.
