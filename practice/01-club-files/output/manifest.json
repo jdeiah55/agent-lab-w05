@@ -1,0 +1,62 @@
+[
+  {
+    "source": "proposal_final.txt",
+    "destination": "Planning/proposal_final.txt",
+    "reason": "Activity proposals, meeting decisions, next steps, or weather contingency."
+  },
+  {
+    "source": "proposal_final2.txt",
+    "destination": "Planning/proposal_final2.txt",
+    "reason": "Activity proposals, meeting decisions, next steps, or weather contingency."
+  },
+  {
+    "source": "meeting_notes.txt",
+    "destination": "Planning/meeting_notes.txt",
+    "reason": "Activity proposals, meeting decisions, next steps, or weather contingency."
+  },
+  {
+    "source": "next_steps.txt",
+    "destination": "Planning/next_steps.txt",
+    "reason": "Activity proposals, meeting decisions, next steps, or weather contingency."
+  },
+  {
+    "source": "rain_plan.txt",
+    "destination": "Planning/rain_plan.txt",
+    "reason": "Activity proposals, meeting decisions, next steps, or weather contingency."
+  },
+  {
+    "source": "announcement.txt",
+    "destination": "Communications/announcement.txt",
+    "reason": "Announcement or poster wording for participants."
+  },
+  {
+    "source": "announcement_copy.txt",
+    "destination": "Communications/announcement_copy.txt",
+    "reason": "Announcement or poster wording for participants."
+  },
+  {
+    "source": "poster_text.txt",
+    "destination": "Communications/poster_text.txt",
+    "reason": "Announcement or poster wording for participants."
+  },
+  {
+    "source": "budget_draft.txt",
+    "destination": "Resources/budget_draft.txt",
+    "reason": "Proposed budget or equipment inventory."
+  },
+  {
+    "source": "equipment_list.txt",
+    "destination": "Resources/equipment_list.txt",
+    "reason": "Proposed budget or equipment inventory."
+  },
+  {
+    "source": "equipment_backup.txt",
+    "destination": "Resources/equipment_backup.txt",
+    "reason": "Proposed budget or equipment inventory."
+  },
+  {
+    "source": "feedback_questions.txt",
+    "destination": "Feedback/feedback_questions.txt",
+    "reason": "Questions for collecting participant feedback."
+  }
+]
