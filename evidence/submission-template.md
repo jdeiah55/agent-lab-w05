@@ -1,11 +1,11 @@
 # My lab evidence
 
-- Group code: NOT SUPPLIED
+- Group code: Not applicable / none supplied; individual work.
 - Tool: Codex desktop
-- Route: NOT CONFIRMED
+- Route: Individual (confirmed by the student).
 - Tasks completed locally: A, B (including visual-style revision), C, D
 - Material: NDHU classroom fictional teaching data
-- My role and personal inspection: TO BE COMPLETED BY STUDENT; agent checks are recorded below and are not personal inspection ticks.
+- My role and personal inspection: I worked alone. The supplied Campus Agent Lab PDF, pages 16–17, contains my self-reported inspection ticks for setup and tasks A–D, a revision note, and the rejection. These are personal reports, not independent execution proof. Generic partner wording in the exported checklist does not indicate paired work.
 
 ## Scope and plan
 
@@ -29,4 +29,8 @@ Rejected organizing all Downloads, deleting duplicates, assuming final2 is appro
 
 ## Still unverified
 
-Student personal inspections, group code and route, TM screenshots, actual phone/browser visual QA, and original B-version Git history. Completed outputs and draft evidence were committed and pushed to https://github.com/jdeiah55/agent-lab-w05; remote main was verified against local HEAD. This is a draft evidence record, not a claim that these missing steps are complete.
+Separate TM screenshots, preserved before/after revision artifacts, independently verified phone/browser visual QA, and original B-version Git history. Personal inspections are now supplied as self-reported PDF checklists; individual route and absence of a group code are confirmed. Completed outputs and draft evidence were committed and pushed to https://github.com/jdeiah55/agent-lab-w05; remote main was verified against local HEAD. This is a draft evidence record, not a claim that these missing steps are complete.
+
+## Supplied student learning record
+
+Reviewed the 17-page Campus Agent Lab PDF supplied by the student. Pages 16–17 show checked observations: A originals/copies and version preservation; B strict-filter examples, latest-five history, reset, clear, language switching and revision/retest; C row counts, shared-ID retention and uncertain quantity preservation; D problems and rejection. The revision note says font size and colour scheme were improved. A and C have no additional narrative notes. The PDF marks before/after evidence as kept but does not itself include those artifacts. The PDF is referenced locally and was not uploaded to GitHub.

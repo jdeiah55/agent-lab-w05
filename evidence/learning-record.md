@@ -12,6 +12,10 @@ Prepared from the actual conversation and command results, not a full exported t
 
 - This downloaded folder had no .git directory or Git remote when inspected. Earlier per-task commits and pushes were not performed.
 - The original B version is not preserved in Git history. A retrospective file reconstruction would not prove an earlier commit.
-- Group code, individual/paired route, student personal inspection, and TM screenshots are not supplied. Do not claim these as complete.
+- Student confirmed individual work and no group code. Supplied PDF pages 16–17 contain self-reported inspection ticks, revision note and rejection. Separate TM screenshots and before/after revision artifacts are not supplied.
 - Attached screenshots describe assignment instructions; they are not execution evidence.
 - Connected to https://github.com/jdeiah55/agent-lab-w05 and pushed five commits: A 0ed2946, current B 645fa3e, C cc1b49c, D 057d00b, evidence e4f71b6. Verified remote main matched local HEAD after push. Earlier per-task timing and original B history remain unavailable.
+
+## Student-supplied evidence update
+
+Read all 17 pages by text extraction and visually inspected the learning-record pages 16–17. Checklist ticks are self-reported observations, not proof of agent execution. The student confirms working alone despite generic partner wording. The original PDF remains unchanged in Downloads and was not published.
